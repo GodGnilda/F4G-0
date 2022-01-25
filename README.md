@@ -35,7 +35,7 @@ FINAL FANTASY V や Romancing Sa·Ga 2 などの ROM データの値を使用可
 	- 二つの微調整値を使用してピッチを計算  
 FINAL FANTASY V や Romancing Sa·Ga 2 などの ROM データの値を使用可能 (シーケンスコマンド [$FE](https://gnilda.rosx.net/SPC/F4G/sequence_commands_0.html#FE))
 - オリジナルと異なる仕様
-  - エコーディレイ変化
+  - エコーディレイ変化  
   サウンドドライバファンクション等で変化した場合、待機時間がオリジナルよりも若干長い場合がある。  
   - シーケンスコマンド [$D2](https://gnilda.rosx.net/SPC/F4G/sequence_commands_0.html#D2)  
   効果音から設定可能 (-4 バイト, -4 サイクル)
@@ -50,6 +50,15 @@ FINAL FANTASY V や Romancing Sa·Ga 2 などの ROM データの値を使用可
 
 ## サウンドドライババージョン
 APU RAM $B5F0 ～ $B5FF の 16 バイトをご確認ください。
+  <details>
+  <summary>以前のバージョンの APU RAM アドレス</summary>
+
+  |バージョン|APU RAM アドレス|
+  |:----:|:----:|
+  |20211122-0|$B5F0 ～ $B5FF|
+  |20211124-0|$B5F0 ～ $B5FF|
+  |20211224-0|$B5F0 ～ $B5FF|
+  </details>
 
 ## 使用方法
 - **日本語**かつ**イージータイプではない** FINAL FANTASY IV の ROM イメージファイル (1,048,576 バイト) に IPS ファイルを適用します。
@@ -58,7 +67,7 @@ APU RAM $B5F0 ～ $B5FF の 16 バイトをご確認ください。
 - 音楽データと波形データを[スクリプトファイル](https://github.com/GodGnilda/Script700/tree/main/F4G)で転送し、スナップショットを作成します。
 
 ## 演奏可能な曲 (ROM データ)
-最新版 (F4G-0 20211224-0) の[スクリプトファイル](https://github.com/GodGnilda/Script700/tree/main/F4G)で演奏可能なデータです。  
+最新版 (F4G-0 20220124-0) の[スクリプトファイル](https://github.com/GodGnilda/Script700/tree/main/F4G)で演奏可能なデータです。  
 [FINAL FANTASY IV 改造サウンドドライバ で ROM のデータを使用して音楽を演奏するスクリプト](https://github.com/GodGnilda/Script700/blob/main/F4G/F4G_F4G.700)でスナップショットを保存しお楽しみください。  
 データに不備等がございましたらお手数ですが [Issue](https://github.com/GodGnilda/F4G-0/issues) にてご指摘のほどよろしくお願いいたします。
 
@@ -97,6 +106,8 @@ APU RAM $B5F0 ～ $B5FF の 16 バイトをご確認ください。
 - [F4G-0 20211122-0 | クイックタイム状態での Romancing Sa·Ga 2 との演奏速度の比較。](https://twitter.com/god_gnilda/status/1462796898905968647)
 
 ## 更新履歴
+- 2022/01/24 [F4G-0 20220124-0]
+  - 効果音を正しく演奏できない不具合を修正。
 - 2021/12/24 [F4G-0 20211224-0]
   - メインループの処理が 4 サイクル低速化。
   - キーオン予約時の処理を高速化。
